@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # construct the ECR name.
-account=$(aws sts get-caller-identity --query Account --output text)
+#account=$(aws sts get-caller-identity --query Account --output text)
+account=716282482850
 region=ap-south-1
 #$(aws configure get region)
 #change thefullname to your own ecr repository
