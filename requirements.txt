@@ -9,3 +9,4 @@ opencv-python
 pandas
 jupyter
 sagemaker
+botocore==1.17.50
