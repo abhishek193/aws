@@ -8,7 +8,6 @@ WORKDIR "app"
 COPY "requirements.txt" .
 RUN ["pip", "install", "-r", "requirements.txt"]
 
-#COPY "BatchCreator.ipynb" .
 #COPY BatchCreator.py /app/BatchCreator.py
 #COPY "Train.ipynb" /app/Train.ipynb
 
