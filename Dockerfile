@@ -21,8 +21,8 @@ ENV SHELL /bin/bash
 # VOLUME ["/home/tarun/Downloads" "/tmp"]
 # If the following dependency is put in requirements, it gets ignored as 1.0.8 is already found but that version poses issues in code
 RUN ["pip", "install", "--upgrade", "Keras-Applications==1.0.7"]
-COPY "BatchCreator.ipynb" /app/BatchCreator.py
-COPY "Train.py" /app/Train.py
+COPY "dataprep.py" /app/BatchCreator.py
+COPY "modeltrain.py" /app/Train.py
 
 COPY "run.sh" .
 RUN ["chmod", "+x", "./run.sh"]
