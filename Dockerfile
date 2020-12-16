@@ -8,9 +8,9 @@ WORKDIR "app"
 COPY "requirements.txt" .
 RUN ["pip", "install", "-r", "requirements.txt"]
 
-COPY "BatchCreator.ipynb" .
+#COPY "BatchCreator.ipynb" .
 #COPY BatchCreator.py /app/BatchCreator.py
-COPY "Train.ipynb" /app/Train.ipynb
+#COPY "Train.ipynb" /app/Train.ipynb
 
 # install environment dependencies
 ENV SHELL /bin/bash
@@ -21,7 +21,7 @@ ENV SHELL /bin/bash
 # VOLUME ["/home/tarun/Downloads" "/tmp"]
 # If the following dependency is put in requirements, it gets ignored as 1.0.8 is already found but that version poses issues in code
 RUN ["pip", "install", "--upgrade", "Keras-Applications==1.0.7"]
-COPY BatchCreator.ipynb /app/BatchCreator.py
+COPY "BatchCreator.ipynb" /app/BatchCreator.py
 COPY "Train.py" /app/Train.py
 
 COPY "run.sh" .
