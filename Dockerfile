@@ -26,9 +26,9 @@ COPY "modeltrain.py" /app/Train.py
 
 COPY "run.sh" .
 RUN ["chmod", "+x", "./run.sh"]
-COPY training-data/ /tmp/training-data/
+#COPY training-data/ /tmp/training-data/
 RUN ["mkdir", "-p" , "/app/training-data"]
-COPY training-data/* /app/training-data/
+#COPY training-data/* /app/training-data/
 
 COPY "preparemodel.py" /app/preparemodel.py
 RUN ["pip", "install", "boto3"]
