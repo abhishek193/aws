@@ -61,7 +61,8 @@ PATH_TO_LABELS = os.path.join('gtsdb_data', 'gtsdb3_label_map.pbtxt')
 
 NUM_CLASSES = 3
 
-
+BUCKET = 'ges-inference-pipeline'
+prefix='working-storage/'
 # In[6]:
 
 
@@ -219,7 +220,7 @@ vis_util.visualize_boxes_and_labels_on_image_array(
                 use_normalized_coordinates=True,
                 line_thickness=6)
 
-numpy_to_s3('aidevops-inference-pipeline-bucket','sign-detection/sample.jpg',image_np)
+numpy_to_s3('ges-inference-pipeline','sign-detection/sample.jpg',image_np)
 
 '''
 plt.figure(idx, figsize=IMAGE_SIZE)

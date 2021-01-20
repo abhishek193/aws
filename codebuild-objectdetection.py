@@ -126,6 +126,9 @@ PATH_TO_LABELS = os.path.join('object_detection/data', 'mscoco_label_map.pbtxt')
 
 NUM_CLASSES = 90
 
+BUCKET = 'ges-inference-pipeline'
+prefix = 'working-storage/'
+
 #BUCKET = 'autonomous-mobility'
 #KEY = 'testimages/sample.jpg'
 
@@ -202,8 +205,7 @@ def result(list_result, image_path):
 
 
 #BUCKET = 'sagemaker-aidevops'
-BUCKET = 'ges-inference-pipeline'
-prefix = 'working-storage/'
+
 #TEST_IMAGE_PATHS = getList(BUCKET,prefix )
 TEST_IMAGE_PATHS = ['working-storage/sample.jpg']
 print('All paths in the bucket...')
