@@ -61,7 +61,7 @@ def toDB(image_path, result):
     import configparser
     # config object to read from file passed as an argument
     config = configparser.ConfigParser()
-    arg = config.read('config.ini')
+    arg = config.read('aws\\config.ini')
     # input_file = open(sys.argv[2], "r")
     image_s3_path = image_path # input_file.readline().strip()
     image_objects = result # # input_file.readline().strip()
