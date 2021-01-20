@@ -34,9 +34,11 @@ filename = 'inference-data/sample.jpg' # replace with your object key
 s3 = boto3.resource('s3')
 s3.Bucket(bucketname).download_file(filename, 'sample.jpg')
 
-
+#sagemaker-tensorflow-serving-2021-01-19-13-21-08-231
 client = boto3.client('sagemaker')
 end_point=client.list_endpoints(StatusEquals='InService',SortBy='CreationTime')['Endpoints'][0]['EndpointName']
+
+#end_point = 'sagemaker-tensorflow-serving-2021-01-19-13-21-08-231'
 
 #print(client.list_training_jobs(SortBy='CreationTime')['TrainingJobSummaries'][0]['TrainingJobName'])
 
