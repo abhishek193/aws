@@ -39,7 +39,7 @@ client = boto3.client('sagemaker')
 end_point=client.list_endpoints(StatusEquals='InService',SortBy='CreationTime')['Endpoints'][0]['EndpointName']
 
 #end_point = 'sagemaker-tensorflow-serving-2021-01-19-13-21-08-231'
-#add endpoint
+#add end point
 #print(client.list_training_jobs(SortBy='CreationTime')['TrainingJobSummaries'][0]['TrainingJobName'])
 
 predictor=sagemaker.tensorflow.model.TensorFlowPredictor(end_point, sagemaker.Session())
