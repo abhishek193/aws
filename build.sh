@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # construct the ECR name.
 account=$(aws sts get-caller-identity --query Account --output text)
 region=ap-south-1
