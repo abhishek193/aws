@@ -53,16 +53,19 @@ MODEL_NAME = 'ssd_mobilenet_v1'
 
 
 # Path to frozen detection graph. This is the actual model that is used for the traffic sign detection.
-MODEL_PATH = os.path.join('models_signdetection', MODEL_NAME)
-PATH_TO_CKPT = os.path.join(MODEL_PATH,'inference_graph/frozen_inference_graph.pb')
+#MODEL_PATH = os.path.join('aws/models_signdetection', MODEL_NAME)
+#PATH_TO_CKPT = os.path.join(MODEL_PATH,'inference_graph/frozen_inference_graph.pb')
 
+#MODEL_PATH = 'aws/models_signdetection'
+PATH_TO_CKPT = 'aws/frozen_inference_graph.pb'
+PATH_TO_LABELS = 'aws/gtsdb3_label_map.pbtxt'
 # List of the strings that is used to add correct label for each box.
-PATH_TO_LABELS = os.path.join('gtsdb_data', 'gtsdb3_label_map.pbtxt')
+#PATH_TO_LABELS = os.path.join('gtsdb_data', 'gtsdb3_label_map.pbtxt')
 
 NUM_CLASSES = 3
 
-BUCKET = 'ges-inference-pipeline'
-prefix='working-storage/'
+#BUCKET = 'ges-inference-pipeline'
+#prefix='working-storage/'
 # In[6]:
 
 
@@ -166,7 +169,7 @@ print(TEST_IMAGE_PATHS)
 # In[11]:
 
 #BUCKET = 'sagemaker-aidevops'
-BUCKET = 'aidevops-inference-pipeline-bucket'
+BUCKET = 'ges-inference-pipeline'
 prefix = 'working-storage/'
 #TEST_IMAGE_PATHS = getList(BUCKET,prefix )
 TEST_IMAGE_PATHS = ['working-storage/sample.jpg']
