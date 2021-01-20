@@ -69,7 +69,7 @@ NUM_CLASSES = 3
 # In[6]:
 
 
-print(MODEL_PATH)
+#print(MODEL_PATH)
 print(PATH_TO_CKPT)
 #!ls -ltr
 
