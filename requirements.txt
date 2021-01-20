@@ -1,7 +1,8 @@
-tensorflow
+sklearn
+tensorflow==1.12.0
 keras==2.2.0
-tensorflow-estimator
-tensorflow-serving-api
+tensorflow-estimator==1.10.12
+tensorflow-serving-api==1.12.0
 numpy
 pillow
 scikit-image
@@ -9,3 +10,11 @@ opencv-python
 pandas
 jupyter
 sagemaker
+Cython
+contextlib2
+lxml
+matplotlib 
+mysqlclient
+mysql
+pymysql
+
