@@ -14,6 +14,7 @@ from tensorflow.keras import backend as k
 config = tf.ConfigProto()
  
 tf.keras.backend.set_session(tf.Session(config=config))
+#start timer
 starttime = time.time()
 
 # dimensions of our images.
