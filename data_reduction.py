@@ -46,7 +46,7 @@ result_byte = obj['Body'].read()
 result = result_byte.decode("utf-8")
 float_result = float(result)
 
-
+#print artifact value
 print("Output artifact read value ="+ result)
 
 read_obj = s3_client.get_object(Bucket=bucket_name, Key=key_read)
